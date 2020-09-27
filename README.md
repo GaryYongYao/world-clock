@@ -1,5 +1,9 @@
 World Clock Listing
 
+Steps to open
+1) yarn
+2) yarn start
+
 Built a reactjs web application with these functions:- 
 
 1. User will need to login to this web application. 
