@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = (process.env.NODE_ENV === 'production') ? 'https://jx-agency.herokuapp.com/' : 'http://localhost:5000/'
+axios.defaults.baseURL = 'https://run.mocky.io/v3/'
 
 function request(type, url, data = null) {
   const promise = new Promise((resolve, reject) => {

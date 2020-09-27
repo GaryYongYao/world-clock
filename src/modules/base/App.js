@@ -1,23 +1,25 @@
-import React from 'react';
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
+import { MuiThemeProvider } from '@material-ui/core/styles'
+import theme from 'modules/ui/theme'
+import LoginScreen from 'modules/login'
+import ClockScreen from 'modules/clock'
+import { CustomSnackbar, SnackbarContextProvider } from 'modules/ui/common/Snackbar'
 import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <SnackbarContextProvider>
+        <div className="container">
+          <BrowserRouter>
+            <Route exact path="/" component={LoginScreen} />
+            <Route exact path="/clocks" component={ClockScreen} />
+          </BrowserRouter>
+        </div>
+        <CustomSnackbar />
+      </SnackbarContextProvider>
+    </MuiThemeProvider>
   );
 }
 

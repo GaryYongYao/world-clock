@@ -129,13 +129,13 @@ const theme = createMuiTheme({
       },
       h4: {
         fontSize: '2.125rem',
-        fontWeight: 600,
+        fontWeight: 400,
         lineHeight: 1.17,
         color: '#707070',
       },
       h5: {
         fontSize: '1.5rem',
-        fontWeight: 600,
+        fontWeight: 400,
         lineHeight: 1.33,
         letterSpacing: '0em',
         color: '#707070',
@@ -152,7 +152,6 @@ const theme = createMuiTheme({
         fontWeight: 600,
         lineHeight: 1.75,
         letterSpacing: '0.00938em',
-        color: '#707070',
       },
       subtitle2: {
         fontSize: '0.875rem',
@@ -190,9 +189,6 @@ const theme = createMuiTheme({
             overflowY: 'visible !important',
           }
         }
-      },
-      root: {
-        backgroundColor: 'transparent'
       }
     }
   },
@@ -203,7 +199,7 @@ const theme = createMuiTheme({
   },
   typography: {
     useNextVariants: true,
-    fontFamily: 'Helvetica',
+    fontFamily: '"Orbitron"," sans-serif"',
     htmlFontSize: 14,
   },
   custom: {

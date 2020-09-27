@@ -13,6 +13,20 @@ export const getSessionCookie = () => {
   return JSON.parse(sessionCookie)
 }
 
+export const setZoneCookie = zone => {
+  Cookies.remove('zone')
+  Cookies.set('zone', zone)
+}
+
+export const getZoneCookie = () => {
+  const sessionCookie = Cookies.get('zone')
+
+  if (sessionCookie === undefined) return []
+
+  return JSON.parse(sessionCookie)
+}
+
 export const logout = () => {
   Cookies.remove('session')
+  Cookies.remove('zone')
 }
